@@ -1,0 +1,115 @@
+mvn archetype:generate -U -DarchetypeGroupId=net.liftweb -DarchetypeArtifactId=lift-archetype-blank -DarchetypeVersion=1.0 -DremoteRepositories=http://scala-tools.org/repo-releases -DgroupId=demo.helloworld -DartifactId=helloworld -Dversion=1.0-SNAPSHOT 
+
+mvn archetype:generate -U -DarchetypeGroupId=net.liftweb -DarchetypeArtifactId=lift-archetype-basic -DarchetypeVersion=1.0 -DremoteRepositories=http://scala-tools.org/repo-releases -DgroupId=com.liftworkshop -DartifactId=todo -Dversion=1.0
+
+Lift’s “View First” design 	vs 	Ruby's controller first” dispatch mechanism
+----------------------------------------------------------------------------------
+
+1. Login Authentication Page
+2. d
+
+-----------------------------------------
+
+Lift Snippets, lift’s templating support.
+-----------------------------------------
+
+<lift:surround>	-	Find template, name of the template in with attribute.
+				-	At - method block within template
+				-	binding templating (fundamental to LIFT template)
+
+<lift:Menu.builder />	-	SiteMap
+						-	Handles Menu for ananymous & logged in user
+						-	Roles & Permission
+						
+<lift:msgs/>			-	Status, Error Messages
+<lift:class.method>		-	Snippet, Could be recursive
+						-	<lift:helloWorld.howdy /> - howdy method could again retrn <lift:anotherclass:newMethod/>
+
+In Lift, the snippet is the equivalent of a Rails controller: 
+Lift snippet is the instantiation of a class and invocation of a method on the class.
+In  Lift, business logic will never fall in the templates.
+						
+bootstrap.liftweb.Boot class.
+----------------------------
+The Boot class is responsible for the configuration and setup of the Lift framework.
+Boot Class				-	Snippet Package + SiteMap, Executed Only Once.
+						-	Wire your application together.						
+							Rules that route URLs to code.
+							database connections and JNDI. 
+							Database transactions related to the HTTP request/response life-cycle, 
+							the ToDo application, we’ll only change Schemifier as the rest of the settings are correct.
+							Site navigation and access control rules, Determine locale if browser headers are not good enough, etc. For
+
+
+
+
+Schemifier
+----------------------------
+Schemifier will manage the ToDo table.
+
+Schemifier takes a collection of models, inspects the database for the tables, right columns, right indexes, and right constraints are present in database.
+
+
+
+--------------------------------
+git help git
+git config --global user.name "Mohan Naraynaswamy"
+git config --global user.email mohance@yahoo.com
+git config --global color.status auto
+git config --global color.branch auto
+git config mohanmca
+cat ~/.gitconfig
+find .git
+git ls-files --staged
+git ls-files --cache
+git add .
+git commit
+git log (see history)
+git clone git://github.com/schadfd/exmama/gidi.git
+git fetch  git://github.com/dpp/lift-samples
+git diff --cached (befor committing)
+git commit -a (without adding, direct commit)
+.gitignore file can be used to store ignoring file.
+git status (see uncommitted file)
+git count-objects
+
+Next steps:
+
+  mkdir mytest
+  cd mytest
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:mohanmca/mytest.git
+  git push origin master
+      
+
+Existing Git Repo?
+
+  cd existing_git_repo
+  git remote add origin git@github.com:mohanmca/mytest.git
+  git push origin master
+     git status
+	 git clone http://www.kernel.org/pub/scm/git/git.git
+
+--------------------------------------------
+maven - eclipse - jetty - remote debugging
+--------------------------------------------
+mvn eclipse:add-maven-repo "-Declipse.workspace=c:\Documents and Settings\brett.morgan\workspace" 
+mvn eclipse:add-maven-repo "-Declipse.workspace=d:\jini\workspace" 
+
+Step 1 
+Go to the Run/External Tools/External Tools ..." menu item on the "Run" menu bar. Select "Program" and click the "New" button. On the "Main" tab, fill in the "Location:" as the full path to your "mvn" executable. For the "Working Directory:" select the workspace that matches your webapp. For "Arguments:" add jetty6:run. 
+
+Move to the "Environment" tab and click the "New" button to add a new variable named MAVEN_OPTS with the value: 
+
+-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=y 
+
+If you supply suspend=n instead of suspend=y you can start immediately without running the debugger and launch the debugger at anytime you really wish to debug. 
+
+[edit]Step 2 
+Then, pull up the "Run/Debug/Debug ..." menu item and select "Remote Java Application" and click the "New" button. Fill in the dialog by selecting your webapp project for the "Project:" field, and ensure you are using the same port number as you specified in the address= property above. 
+
+Now all you need to do is to Run/External Tools and select the name of the maven tool setup you created in step 1 to start the plugin and then Run/Debug and select the name of the debug setup you setup in step2. 
+ 

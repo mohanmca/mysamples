@@ -1,0 +1,74 @@
+    1  ssh-keygen -C "mohanmca@gmail.com" -t rsa
+    2  git config --global user.name "Your Name"
+    3  git config --global user.name "MohanMca"
+    4  git config --global user.email mohance@yahoo.com
+    5  git init
+    6  git commit -m 'first commit'
+    7  git add .
+    8  git remote add origin git@github.com:mohanmca/mysamples.git
+    9  git push origin master
+   10  git push origin master
+   11  exit
+   12  cd d:
+   13  cd Scala/
+   14  dir
+   15  ls
+   16  cd Application/
+   17  ls
+   18  cd github/mysamples/
+   19  cd mysamples/
+   20  git add README
+   21  git commit -m 'first comment'
+   22  git remote add origin git@github.com:mohanmca/mysamples.git
+   23  git push origin master
+   24  ssh-keygen
+   25  ssh-keygen -C "mohance@yahoo.com" -t rsa
+   26  git remote add origin git@github.com:mohanmca/mysamples.git
+   27  git push origin master
+   28  ssh-keygen -C "mohance@yahoo.com" -t rsa
+   29  cd ~
+   30  ls
+   31  ls id*
+   32  ssh-add id_rsa
+   33  ls -latr id*
+   34  ls -latr id*
+   35  ssh-keygen -C "mohance@yahoo.com" -t rsa
+   36  git push origin master
+   37  cd d:
+   38  cd Scala/Application/github/
+   39  ls
+   40  cd mysamples/
+   41  cd mysamples/
+   42  git push origin master
+   43  ssh user@git.example.com echo testing commands
+   44  ssh user@git.example.com echo testing commands
+   45  git push origin master
+   46  git status
+   47  cd ~
+   48  cat .gitconfig
+   49  cd d:
+   50  cd Scala/Application/github/mysamples/
+   51  cd mysamples/
+   52  find .git
+   53  git ls-files cache
+   54  git ls-files --staged
+   55  git ls-files --others
+   56  git ls-files --ignored
+   57  git ls-files -d
+   58  git status
+   59  git log
+   60  pwd
+   61  git clone git://github.com/dpp/lift-samples
+   62  git clone git://github.com/dpp/lift-samples
+   63  git clone git://github.com/dpp/lift-samples
+   64  git fetch
+   65  git help
+   66  git fetch  git://github.com/dpp/lift-samples
+   67  git fetch  git://github.com/dpp/lift-samples
+   68  exit
+   69  d
+   70  /d
+   71  pwd
+   72  cd /d/Scala/
+   73  cd Application/github/
+   74  git clone git://github.com/dpp/liftweb.git
