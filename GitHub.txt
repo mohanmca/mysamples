@@ -7,10 +7,7 @@
     7  git add .
     8  git remote add origin git@github.com:mohanmca/mysamples.git
     9  git push origin master
-   10  git push origin master
    11  exit
-   12  cd d:
-   13  cd Scala/
    14  dir
    15  ls
    16  cd Application/
@@ -21,7 +18,6 @@
    21  git commit -m 'first comment'
    22  git remote add origin git@github.com:mohanmca/mysamples.git
    23  git push origin master
-   24  ssh-keygen
    25  ssh-keygen -C "mohance@yahoo.com" -t rsa
    26  git remote add origin git@github.com:mohanmca/mysamples.git
    27  git push origin master
@@ -30,18 +26,15 @@
    30  ls
    31  ls id*
    32  ssh-add id_rsa
-   33  ls -latr id*
    34  ls -latr id*
    35  ssh-keygen -C "mohance@yahoo.com" -t rsa
    36  git push origin master
    37  cd d:
    38  cd Scala/Application/github/
    39  ls
-   40  cd mysamples/
    41  cd mysamples/
    42  git push origin master
    43  ssh user@git.example.com echo testing commands
-   44  ssh user@git.example.com echo testing commands
    45  git push origin master
    46  git status
    47  cd ~
@@ -58,17 +51,13 @@
    58  git status
    59  git log
    60  pwd
-   61  git clone git://github.com/dpp/lift-samples
-   62  git clone git://github.com/dpp/lift-samples
    63  git clone git://github.com/dpp/lift-samples
    64  git fetch
    65  git help
-   66  git fetch  git://github.com/dpp/lift-samples
    67  git fetch  git://github.com/dpp/lift-samples
    68  exit
-   69  d
-   70  /d
    71  pwd
    72  cd /d/Scala/
    73  cd Application/github/
    74  git clone git://github.com/dpp/liftweb.git
+   75  git fetch
